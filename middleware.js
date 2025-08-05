@@ -1,5 +1,5 @@
 import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
-import arcjet from "arcjet";
+import arcjet, { detectBot, shield } from "arcjet";
 
 const isProtectedRoute = createRouteMatcher([
   "/dashboard(.*)", // fixed typo
